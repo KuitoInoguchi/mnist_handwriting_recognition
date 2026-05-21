@@ -1,0 +1,13 @@
+# 忽略数据集文件夹
+data/
+
+# Python 缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 开发环境配置
+.venv/
+.idea/
+.vscode/
