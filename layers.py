@@ -130,12 +130,12 @@ class Flatten:
 
 
 # ============================================================
-# 4. 最大池化层 MaxPool2D
+# 4. 平均池化层 AvgPool2D
 # ============================================================
 
-class MaxPool2D:
+class AvgPool2D:
     """
-    二维最大池化层。
+    二维平均池化层。
 
     输入:
         X: [N, C, H, W]
@@ -147,7 +147,7 @@ class MaxPool2D:
         pool_size = 2
         stride = 2
 
-    MaxPool 没有可训练参数，但 backward 时需要把梯度传回 forward 取得最大值的位置。
+    AvgPool 没有可训练参数。
     """
 
     def __init__(self, pool_size=2, stride=2):
@@ -180,7 +180,7 @@ class MaxPool2D:
                         w_end = w_start + K
 
                         region = X[n, c, h_start:h_end, w_start:w_end]
-                        out[n, c, i, j] = np.max(region)
+                        out[n, c, i, j] = np.mean(region)
 
         return out
 
@@ -207,16 +207,9 @@ class MaxPool2D:
                         w_start = j * S
                         w_end = w_start + K
 
-                        region = X[n, c, h_start:h_end, w_start:w_end]
-                        max_value = np.max(region)
-
-                        # mask 的 shape 是 [K, K]。
-                        # 最大值位置为 True，其余位置为 False。
-                        mask = (region == max_value)
-
                         # dY[n, c, i, j] 是一个标量。
-                        # mask * dY[n,c,i,j] 的 shape 仍然是 [K, K]。
-                        dX[n, c, h_start:h_end, w_start:w_end] += mask * dY[n, c, i, j]
+                        # 平均池化将梯度平均分配给该池化区域内的所有像素。
+                        dX[n, c, h_start:h_end, w_start:w_end] += dY[n, c, i, j] / (K * K)
 
         return dX
 
@@ -466,11 +459,11 @@ class SimpleCNN:
     结构:
         Conv1: 1 -> 6, K=5, S=1, P=0
         ReLU
-        MaxPool: K=2, S=2
+        AvgPool: K=2, S=2
 
         Conv2: 6 -> 16, K=5, S=1, P=0
         ReLU
-        MaxPool: K=2, S=2
+        AvgPool: K=2, S=2
 
         Flatten: [N, 16, 4, 4] -> [N, 256]
 
@@ -488,11 +481,11 @@ class SimpleCNN:
         self.layers = [
             Conv2D(in_channels=1, out_channels=6, kernel_size=5, stride=1, padding=0),
             ReLU(),
-            MaxPool2D(pool_size=2, stride=2),
+            AvgPool2D(pool_size=2, stride=2),
 
             Conv2D(in_channels=6, out_channels=16, kernel_size=5, stride=1, padding=0),
             ReLU(),
-            MaxPool2D(pool_size=2, stride=2),
+            AvgPool2D(pool_size=2, stride=2),
 
             Flatten(),
 
