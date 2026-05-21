@@ -8,21 +8,11 @@ import numpy as np
 
 
 def accuracy(probs, y):
-    """
-    计算分类准确率。
-
-    参数:
-        probs: [N, C]，模型的预测概率或未归一化得分
-        y: [N]，真实标签 0~9
-    """
     pred = np.argmax(probs, axis=1)
     return float(np.mean(pred == y))
 
 
 def predict(model, X, batch_size=256):
-    """
-    分批预测，返回完整概率矩阵 [N, 10]。
-    """
     from data import iterate_minibatches
 
     probs_list = []
@@ -33,9 +23,6 @@ def predict(model, X, batch_size=256):
 
 
 def evaluate(model, X, y, batch_size=256, return_details=False):
-    """
-    在验证集或测试集上计算精确准确率；不会让最后一个小 batch 改变权重。
-    """
     probs = predict(model, X, batch_size=batch_size)
     pred = np.argmax(probs, axis=1)
     acc = float(np.mean(pred == y))

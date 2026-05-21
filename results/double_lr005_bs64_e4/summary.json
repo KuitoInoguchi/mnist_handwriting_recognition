@@ -1,0 +1,533 @@
+{
+  "created_at": "2026-05-21T23:07:24",
+  "data_path": "data/MNISTData(1).mat",
+  "model_name": "double",
+  "architecture": [
+    {
+      "index": 0,
+      "layer": "Conv2D",
+      "shape": "(12, 1, 5, 5)",
+      "params": 312
+    },
+    {
+      "index": 1,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 2,
+      "layer": "AvgPool2D",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 3,
+      "layer": "Conv2D",
+      "shape": "(24, 12, 5, 5)",
+      "params": 7224
+    },
+    {
+      "index": 4,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 5,
+      "layer": "AvgPool2D",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 6,
+      "layer": "Flatten",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 7,
+      "layer": "Linear",
+      "shape": "(384, 128)",
+      "params": 49280
+    },
+    {
+      "index": 8,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 9,
+      "layer": "Linear",
+      "shape": "(128, 10)",
+      "params": 1290
+    },
+    {
+      "index": 10,
+      "layer": "Softmax",
+      "shape": "",
+      "params": 0
+    }
+  ],
+  "weight_count_without_bias": 57932,
+  "trainable_params_with_bias": 58106,
+  "parameter_limit_weights": 202620,
+  "hyperparameters": {
+    "epochs": 4,
+    "batch_size": 64,
+    "learning_rate": 0.05,
+    "optimizer": "mini-batch SGD",
+    "seed": 0
+  },
+  "data": {
+    "train_shape": [
+      60000,
+      1,
+      28,
+      28
+    ],
+    "test_shape": [
+      10000,
+      1,
+      28,
+      28
+    ],
+    "train_label_counts": [
+      5923,
+      6742,
+      5958,
+      6131,
+      5842,
+      5421,
+      5918,
+      6265,
+      5851,
+      5949
+    ],
+    "test_label_counts": [
+      980,
+      1135,
+      1032,
+      1010,
+      982,
+      892,
+      958,
+      1028,
+      974,
+      1009
+    ],
+    "pixel_min": 0.0,
+    "pixel_max": 1.0
+  },
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.2922125645140807,
+        "train_accuracy": 0.9107,
+        "test_accuracy": 0.9647,
+        "seconds": 8.66785895800058
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.11001274899244308,
+        "train_accuracy": 0.9665833333333333,
+        "test_accuracy": 0.9698,
+        "seconds": 8.791742375000467
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.07928513847986857,
+        "train_accuracy": 0.976,
+        "test_accuracy": 0.9787,
+        "seconds": 8.829307083000458
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.06402382865299781,
+        "train_accuracy": 0.9804833333333334,
+        "test_accuracy": 0.9794,
+        "seconds": 8.793483458000992
+      }
+    ],
+    "best_epoch": 4,
+    "best_test_accuracy": 0.9794,
+    "train_seconds": 35.08315004199903
+  },
+  "analysis": {
+    "test_accuracy": 0.9794,
+    "confusion_matrix": [
+      [
+        962,
+        0,
+        0,
+        0,
+        1,
+        3,
+        1,
+        3,
+        5,
+        5
+      ],
+      [
+        0,
+        1130,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0
+      ],
+      [
+        1,
+        13,
+        991,
+        4,
+        1,
+        0,
+        1,
+        8,
+        13,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        999,
+        0,
+        5,
+        0,
+        3,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        956,
+        0,
+        4,
+        1,
+        1,
+        18
+      ],
+      [
+        1,
+        1,
+        0,
+        6,
+        1,
+        877,
+        2,
+        1,
+        0,
+        3
+      ],
+      [
+        4,
+        2,
+        0,
+        1,
+        3,
+        6,
+        940,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        7,
+        5,
+        6,
+        1,
+        0,
+        0,
+        999,
+        1,
+        9
+      ],
+      [
+        2,
+        0,
+        2,
+        3,
+        2,
+        6,
+        0,
+        2,
+        955,
+        2
+      ],
+      [
+        0,
+        5,
+        0,
+        4,
+        6,
+        1,
+        0,
+        4,
+        4,
+        985
+      ]
+    ],
+    "per_class_accuracy": [
+      0.9816326530612245,
+      0.9955947136563876,
+      0.9602713178294574,
+      0.9891089108910891,
+      0.9735234215885947,
+      0.9831838565022422,
+      0.9812108559498957,
+      0.9717898832684825,
+      0.9804928131416838,
+      0.9762140733399405
+    ],
+    "num_errors": 206,
+    "error_rate": 0.0206,
+    "top_errors": [
+      {
+        "index": 2654,
+        "true": 6,
+        "pred": 1,
+        "confidence": 0.9994828701019287
+      },
+      {
+        "index": 3520,
+        "true": 6,
+        "pred": 4,
+        "confidence": 0.9986886382102966
+      },
+      {
+        "index": 2433,
+        "true": 2,
+        "pred": 1,
+        "confidence": 0.9964901804924011
+      },
+      {
+        "index": 3503,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.9885050654411316
+      },
+      {
+        "index": 6597,
+        "true": 0,
+        "pred": 7,
+        "confidence": 0.9742020964622498
+      },
+      {
+        "index": 4578,
+        "true": 7,
+        "pred": 9,
+        "confidence": 0.9725349545478821
+      },
+      {
+        "index": 9009,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9668672680854797
+      },
+      {
+        "index": 9729,
+        "true": 5,
+        "pred": 6,
+        "confidence": 0.9664391875267029
+      },
+      {
+        "index": 4176,
+        "true": 2,
+        "pred": 7,
+        "confidence": 0.9651840925216675
+      },
+      {
+        "index": 1112,
+        "true": 4,
+        "pred": 6,
+        "confidence": 0.9646915793418884
+      },
+      {
+        "index": 6783,
+        "true": 1,
+        "pred": 6,
+        "confidence": 0.9597551226615906
+      },
+      {
+        "index": 659,
+        "true": 2,
+        "pred": 1,
+        "confidence": 0.959408700466156
+      },
+      {
+        "index": 2387,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.9507450461387634
+      },
+      {
+        "index": 1621,
+        "true": 0,
+        "pred": 6,
+        "confidence": 0.9465484619140625
+      },
+      {
+        "index": 8059,
+        "true": 2,
+        "pred": 1,
+        "confidence": 0.9458330273628235
+      },
+      {
+        "index": 9280,
+        "true": 8,
+        "pred": 5,
+        "confidence": 0.945383608341217
+      },
+      {
+        "index": 5600,
+        "true": 7,
+        "pred": 9,
+        "confidence": 0.9427644610404968
+      },
+      {
+        "index": 3767,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.938478410243988
+      },
+      {
+        "index": 2130,
+        "true": 4,
+        "pred": 9,
+        "confidence": 0.9345117211341858
+      },
+      {
+        "index": 3422,
+        "true": 6,
+        "pred": 0,
+        "confidence": 0.9329124689102173
+      },
+      {
+        "index": 1299,
+        "true": 5,
+        "pred": 7,
+        "confidence": 0.9327738881111145
+      },
+      {
+        "index": 1393,
+        "true": 5,
+        "pred": 3,
+        "confidence": 0.9254117608070374
+      },
+      {
+        "index": 2953,
+        "true": 3,
+        "pred": 5,
+        "confidence": 0.9249354600906372
+      },
+      {
+        "index": 9634,
+        "true": 0,
+        "pred": 8,
+        "confidence": 0.9241198301315308
+      },
+      {
+        "index": 2044,
+        "true": 2,
+        "pred": 7,
+        "confidence": 0.9198282957077026
+      },
+      {
+        "index": 6576,
+        "true": 7,
+        "pred": 1,
+        "confidence": 0.9139362573623657
+      },
+      {
+        "index": 3808,
+        "true": 7,
+        "pred": 8,
+        "confidence": 0.9065765142440796
+      },
+      {
+        "index": 8273,
+        "true": 0,
+        "pred": 9,
+        "confidence": 0.9054792523384094
+      },
+      {
+        "index": 4880,
+        "true": 0,
+        "pred": 8,
+        "confidence": 0.9052661657333374
+      },
+      {
+        "index": 1226,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9046642780303955
+      },
+      {
+        "index": 9811,
+        "true": 2,
+        "pred": 8,
+        "confidence": 0.9043067693710327
+      },
+      {
+        "index": 3869,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.9023885130882263
+      },
+      {
+        "index": 4956,
+        "true": 8,
+        "pred": 4,
+        "confidence": 0.901706874370575
+      },
+      {
+        "index": 1901,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.8994107246398926
+      },
+      {
+        "index": 5937,
+        "true": 5,
+        "pred": 3,
+        "confidence": 0.8974857330322266
+      },
+      {
+        "index": 9158,
+        "true": 0,
+        "pred": 9,
+        "confidence": 0.8902437090873718
+      }
+    ],
+    "mosaic_path": "results/double_lr005_bs64_e4/misclassified_samples.png"
+  },
+  "hardware": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "Model Name": "MacBook Air",
+    "Model Identifier": "Mac17,3",
+    "Chip": "Apple M5",
+    "Total Number of Cores": "10 (4 Performance and 6 Efficiency)",
+    "Memory": "16 GB"
+  },
+  "paths": {
+    "output_dir": "results/double_lr005_bs64_e4",
+    "log": "results/double_lr005_bs64_e4/run.log",
+    "history_csv": "results/double_lr005_bs64_e4/history.csv",
+    "model": "results/double_lr005_bs64_e4/best_model.npz",
+    "mosaic": "results/double_lr005_bs64_e4/misclassified_samples.png"
+  }
+}

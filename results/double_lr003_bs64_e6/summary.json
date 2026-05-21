@@ -1,0 +1,547 @@
+{
+  "created_at": "2026-05-21T23:08:17",
+  "data_path": "data/MNISTData(1).mat",
+  "model_name": "double",
+  "architecture": [
+    {
+      "index": 0,
+      "layer": "Conv2D",
+      "shape": "(12, 1, 5, 5)",
+      "params": 312
+    },
+    {
+      "index": 1,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 2,
+      "layer": "AvgPool2D",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 3,
+      "layer": "Conv2D",
+      "shape": "(24, 12, 5, 5)",
+      "params": 7224
+    },
+    {
+      "index": 4,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 5,
+      "layer": "AvgPool2D",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 6,
+      "layer": "Flatten",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 7,
+      "layer": "Linear",
+      "shape": "(384, 128)",
+      "params": 49280
+    },
+    {
+      "index": 8,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 9,
+      "layer": "Linear",
+      "shape": "(128, 10)",
+      "params": 1290
+    },
+    {
+      "index": 10,
+      "layer": "Softmax",
+      "shape": "",
+      "params": 0
+    }
+  ],
+  "weight_count_without_bias": 57932,
+  "trainable_params_with_bias": 58106,
+  "parameter_limit_weights": 202620,
+  "hyperparameters": {
+    "epochs": 6,
+    "batch_size": 64,
+    "learning_rate": 0.03,
+    "optimizer": "mini-batch SGD",
+    "seed": 0
+  },
+  "data": {
+    "train_shape": [
+      60000,
+      1,
+      28,
+      28
+    ],
+    "test_shape": [
+      10000,
+      1,
+      28,
+      28
+    ],
+    "train_label_counts": [
+      5923,
+      6742,
+      5958,
+      6131,
+      5842,
+      5421,
+      5918,
+      6265,
+      5851,
+      5949
+    ],
+    "test_label_counts": [
+      980,
+      1135,
+      1032,
+      1010,
+      982,
+      892,
+      958,
+      1028,
+      974,
+      1009
+    ],
+    "pixel_min": 0.0,
+    "pixel_max": 1.0
+  },
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.35049895835320155,
+        "train_accuracy": 0.8944333333333333,
+        "test_accuracy": 0.9541,
+        "seconds": 8.703423083003145
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.14088141564528148,
+        "train_accuracy": 0.9577833333333333,
+        "test_accuracy": 0.966,
+        "seconds": 8.818655499999295
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.10083653756926457,
+        "train_accuracy": 0.9696833333333333,
+        "test_accuracy": 0.9731,
+        "seconds": 8.896574166999926
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.08185689108669758,
+        "train_accuracy": 0.9748333333333333,
+        "test_accuracy": 0.9727,
+        "seconds": 8.815246917001787
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.06993488796899716,
+        "train_accuracy": 0.97865,
+        "test_accuracy": 0.979,
+        "seconds": 8.558309957999882
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.06072305921365818,
+        "train_accuracy": 0.9808833333333333,
+        "test_accuracy": 0.9808,
+        "seconds": 8.619359915999667
+      }
+    ],
+    "best_epoch": 6,
+    "best_test_accuracy": 0.9808,
+    "train_seconds": 52.412608167000144
+  },
+  "analysis": {
+    "test_accuracy": 0.9808,
+    "confusion_matrix": [
+      [
+        963,
+        1,
+        0,
+        0,
+        3,
+        0,
+        2,
+        3,
+        3,
+        5
+      ],
+      [
+        0,
+        1132,
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        5,
+        1019,
+        0,
+        1,
+        0,
+        0,
+        4,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        982,
+        0,
+        4,
+        0,
+        9,
+        3,
+        7
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        975,
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        1,
+        0,
+        4,
+        2,
+        880,
+        2,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        1,
+        5,
+        2,
+        945,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        9,
+        0,
+        0,
+        0,
+        0,
+        1005,
+        1,
+        5
+      ],
+      [
+        6,
+        5,
+        7,
+        2,
+        7,
+        5,
+        0,
+        4,
+        933,
+        5
+      ],
+      [
+        1,
+        9,
+        2,
+        1,
+        15,
+        2,
+        0,
+        5,
+        0,
+        974
+      ]
+    ],
+    "per_class_accuracy": [
+      0.9826530612244898,
+      0.9973568281938326,
+      0.9874031007751938,
+      0.9722772277227723,
+      0.9928716904276986,
+      0.9865470852017937,
+      0.9864300626304802,
+      0.9776264591439688,
+      0.9579055441478439,
+      0.9653121902874133
+    ],
+    "num_errors": 192,
+    "error_rate": 0.0192,
+    "top_errors": [
+      {
+        "index": 3520,
+        "true": 6,
+        "pred": 4,
+        "confidence": 0.9999188184738159
+      },
+      {
+        "index": 2654,
+        "true": 6,
+        "pred": 1,
+        "confidence": 0.9997351765632629
+      },
+      {
+        "index": 1299,
+        "true": 5,
+        "pred": 7,
+        "confidence": 0.9971674084663391
+      },
+      {
+        "index": 4956,
+        "true": 8,
+        "pred": 4,
+        "confidence": 0.9959545135498047
+      },
+      {
+        "index": 3503,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.9935492873191833
+      },
+      {
+        "index": 9009,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.992622971534729
+      },
+      {
+        "index": 3767,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.992588222026825
+      },
+      {
+        "index": 1901,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.9891858100891113
+      },
+      {
+        "index": 2387,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.9885596632957458
+      },
+      {
+        "index": 1681,
+        "true": 3,
+        "pred": 7,
+        "confidence": 0.9885210990905762
+      },
+      {
+        "index": 1033,
+        "true": 8,
+        "pred": 1,
+        "confidence": 0.9874862432479858
+      },
+      {
+        "index": 9729,
+        "true": 5,
+        "pred": 6,
+        "confidence": 0.9870722889900208
+      },
+      {
+        "index": 5067,
+        "true": 3,
+        "pred": 2,
+        "confidence": 0.9867710471153259
+      },
+      {
+        "index": 1530,
+        "true": 8,
+        "pred": 7,
+        "confidence": 0.9843209981918335
+      },
+      {
+        "index": 3985,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.9779046773910522
+      },
+      {
+        "index": 947,
+        "true": 8,
+        "pred": 9,
+        "confidence": 0.9711142182350159
+      },
+      {
+        "index": 4880,
+        "true": 0,
+        "pred": 8,
+        "confidence": 0.9676005244255066
+      },
+      {
+        "index": 6400,
+        "true": 0,
+        "pred": 4,
+        "confidence": 0.9648380875587463
+      },
+      {
+        "index": 2896,
+        "true": 8,
+        "pred": 0,
+        "confidence": 0.9647699594497681
+      },
+      {
+        "index": 4306,
+        "true": 3,
+        "pred": 7,
+        "confidence": 0.9606526494026184
+      },
+      {
+        "index": 2953,
+        "true": 3,
+        "pred": 5,
+        "confidence": 0.9575055241584778
+      },
+      {
+        "index": 938,
+        "true": 3,
+        "pred": 5,
+        "confidence": 0.9566069841384888
+      },
+      {
+        "index": 6597,
+        "true": 0,
+        "pred": 7,
+        "confidence": 0.9528247117996216
+      },
+      {
+        "index": 2433,
+        "true": 2,
+        "pred": 1,
+        "confidence": 0.9512355923652649
+      },
+      {
+        "index": 4601,
+        "true": 8,
+        "pred": 4,
+        "confidence": 0.9469113349914551
+      },
+      {
+        "index": 6847,
+        "true": 6,
+        "pred": 4,
+        "confidence": 0.9437978863716125
+      },
+      {
+        "index": 4224,
+        "true": 9,
+        "pred": 7,
+        "confidence": 0.9413650035858154
+      },
+      {
+        "index": 5937,
+        "true": 5,
+        "pred": 3,
+        "confidence": 0.9404535889625549
+      },
+      {
+        "index": 1226,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9404088854789734
+      },
+      {
+        "index": 3869,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.939708411693573
+      },
+      {
+        "index": 2135,
+        "true": 6,
+        "pred": 1,
+        "confidence": 0.9383938908576965
+      },
+      {
+        "index": 1181,
+        "true": 6,
+        "pred": 1,
+        "confidence": 0.9352476000785828
+      },
+      {
+        "index": 4140,
+        "true": 8,
+        "pred": 2,
+        "confidence": 0.9338557720184326
+      },
+      {
+        "index": 2406,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.929928719997406
+      },
+      {
+        "index": 4497,
+        "true": 8,
+        "pred": 7,
+        "confidence": 0.9298036098480225
+      },
+      {
+        "index": 1808,
+        "true": 0,
+        "pred": 4,
+        "confidence": 0.9286794066429138
+      }
+    ],
+    "mosaic_path": "results/double_lr003_bs64_e6/misclassified_samples.png"
+  },
+  "hardware": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "Model Name": "MacBook Air",
+    "Model Identifier": "Mac17,3",
+    "Chip": "Apple M5",
+    "Total Number of Cores": "10 (4 Performance and 6 Efficiency)",
+    "Memory": "16 GB"
+  },
+  "paths": {
+    "output_dir": "results/double_lr003_bs64_e6",
+    "log": "results/double_lr003_bs64_e6/run.log",
+    "history_csv": "results/double_lr003_bs64_e6/history.csv",
+    "model": "results/double_lr003_bs64_e6/best_model.npz",
+    "mosaic": "results/double_lr003_bs64_e6/misclassified_samples.png"
+  }
+}

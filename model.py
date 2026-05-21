@@ -4,10 +4,6 @@ from layers import AvgPool2D, Conv2D, Flatten, Linear, ReLU, Softmax
 
 
 class SequentialCNN:
-    """
-    纯 NumPy 顺序 CNN 基类，负责串联各层的 forward/backward。
-    """
-
     name = "sequential"
 
     def __init__(self, layers):
@@ -91,7 +87,6 @@ class SequentialCNN:
 
 class LectureCNN(SequentialCNN):
     """
-    课件同款 MNIST CNN：
     9x9x20 卷积 -> ReLU -> 2x2 平均池化 -> 展平(2000)
     -> 100 隐层 -> ReLU -> 10 类 Softmax。
 
@@ -147,11 +142,92 @@ class SimpleCNN(SequentialCNN):
         ])
 
 
+class DoubleCNN(SequentialCNN):
+    """
+    双层卷积 CNN：
+    5x5 Conv -> ReLU -> 2x2 AvgPool
+    -> 5x5 Conv -> ReLU -> 2x2 AvgPool
+    -> Flatten -> FC -> ReLU -> 10 类 Softmax
+
+    采用更深的卷积堆叠来缩小展平后的特征维度，从而显著减少全连接层参数量。
+    """
+
+    name = "double"
+
+    def __init__(self, conv1_channels=12, conv2_channels=24, hidden_features=128):
+        self.conv1_channels = conv1_channels
+        self.conv2_channels = conv2_channels
+        self.hidden_features = hidden_features
+
+        super().__init__([
+            Conv2D(in_channels=1, out_channels=conv1_channels, kernel_size=5, stride=1, padding=0),
+            ReLU(),
+            AvgPool2D(pool_size=2, stride=2),
+
+            Conv2D(in_channels=conv1_channels, out_channels=conv2_channels, kernel_size=5, stride=1, padding=0),
+            ReLU(),
+            AvgPool2D(pool_size=2, stride=2),
+
+            Flatten(),
+
+            Linear(in_features=conv2_channels * 4 * 4, out_features=hidden_features),
+            ReLU(),
+
+            Linear(in_features=hidden_features, out_features=10),
+            Softmax(),
+        ])
+
+
+class TripleCNN(SequentialCNN):
+    """
+    三层卷积 CNN：
+    3x3 Conv -> ReLU -> 2x2 AvgPool
+    -> 3x3 Conv -> ReLU -> 2x2 AvgPool
+    -> 3x3 Conv -> ReLU
+    -> Flatten -> FC -> ReLU -> 10 类 Softmax
+
+    通过小卷积核叠加提升特征提取层级，同时保持参数量远低于课件同款模型。
+    """
+
+    name = "triple"
+
+    def __init__(self, conv1_channels=12, conv2_channels=24, conv3_channels=32, hidden_features=96):
+        self.conv1_channels = conv1_channels
+        self.conv2_channels = conv2_channels
+        self.conv3_channels = conv3_channels
+        self.hidden_features = hidden_features
+
+        super().__init__([
+            Conv2D(in_channels=1, out_channels=conv1_channels, kernel_size=3, stride=1, padding=0),
+            ReLU(),
+            AvgPool2D(pool_size=2, stride=2),
+
+            Conv2D(in_channels=conv1_channels, out_channels=conv2_channels, kernel_size=3, stride=1, padding=0),
+            ReLU(),
+            AvgPool2D(pool_size=2, stride=2),
+
+            Conv2D(in_channels=conv2_channels, out_channels=conv3_channels, kernel_size=3, stride=1, padding=0),
+            ReLU(),
+
+            Flatten(),
+
+            Linear(in_features=conv3_channels * 3 * 3, out_features=hidden_features),
+            ReLU(),
+
+            Linear(in_features=hidden_features, out_features=10),
+            Softmax(),
+        ])
+
+
 def build_model(name="lecture"):
     if name == "lecture":
         return LectureCNN()
     if name == "simple":
         return SimpleCNN()
+    if name == "double":
+        return DoubleCNN()
+    if name == "triple":
+        return TripleCNN()
     raise ValueError(f"未知模型结构: {name}")
 
 

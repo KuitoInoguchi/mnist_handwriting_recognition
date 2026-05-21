@@ -1,0 +1,56 @@
+随机种子: 0
+输出目录: results/lecture_lr005_bs64_e4
+训练集: (60000, 1, 28, 28), 测试集: (10000, 1, 28, 28)
+训练标签分布(0~9): [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+测试标签分布(0~9): [980, 1135, 1032, 1010, 982, 892, 958, 1028, 974, 1009]
+模型结构: lecture
+开始训练 lecture 模型 (Epochs=4, Batch Size=64, LR=0.05)
+权值数(不含 bias): 202620 / 202620, 可训练参数(含 bias): 202750
+Epoch 1/4, Batch 0, Loss: 2.4070, Batch Acc: 0.1562
+Epoch 1/4, Batch 100, Loss: 0.4067, Batch Acc: 0.8906
+Epoch 1/4, Batch 200, Loss: 0.3177, Batch Acc: 0.9219
+Epoch 1/4, Batch 300, Loss: 0.3250, Batch Acc: 0.9062
+Epoch 1/4, Batch 400, Loss: 0.1298, Batch Acc: 0.9844
+Epoch 1/4, Batch 500, Loss: 0.2001, Batch Acc: 0.9375
+Epoch 1/4, Batch 600, Loss: 0.1783, Batch Acc: 0.9375
+Epoch 1/4, Batch 700, Loss: 0.1093, Batch Acc: 0.9844
+Epoch 1/4, Batch 800, Loss: 0.1260, Batch Acc: 0.9375
+Epoch 1/4, Batch 900, Loss: 0.1967, Batch Acc: 0.9531
+=== Epoch 1 结束 === train_loss=0.2746, train_acc=0.9180, test_acc=0.9608, seconds=7.70
+Epoch 2/4, Batch 0, Loss: 0.1800, Batch Acc: 0.9219
+Epoch 2/4, Batch 100, Loss: 0.0332, Batch Acc: 1.0000
+Epoch 2/4, Batch 200, Loss: 0.2038, Batch Acc: 0.9375
+Epoch 2/4, Batch 300, Loss: 0.1014, Batch Acc: 0.9688
+Epoch 2/4, Batch 400, Loss: 0.0595, Batch Acc: 1.0000
+Epoch 2/4, Batch 500, Loss: 0.0943, Batch Acc: 0.9688
+Epoch 2/4, Batch 600, Loss: 0.1197, Batch Acc: 0.9688
+Epoch 2/4, Batch 700, Loss: 0.0777, Batch Acc: 0.9844
+Epoch 2/4, Batch 800, Loss: 0.0398, Batch Acc: 0.9844
+Epoch 2/4, Batch 900, Loss: 0.0767, Batch Acc: 0.9844
+=== Epoch 2 结束 === train_loss=0.1023, train_acc=0.9697, test_acc=0.9761, seconds=7.03
+Epoch 3/4, Batch 0, Loss: 0.0462, Batch Acc: 0.9688
+Epoch 3/4, Batch 100, Loss: 0.1051, Batch Acc: 0.9531
+Epoch 3/4, Batch 200, Loss: 0.0733, Batch Acc: 0.9688
+Epoch 3/4, Batch 300, Loss: 0.0505, Batch Acc: 1.0000
+Epoch 3/4, Batch 400, Loss: 0.0233, Batch Acc: 1.0000
+Epoch 3/4, Batch 500, Loss: 0.0828, Batch Acc: 0.9844
+Epoch 3/4, Batch 600, Loss: 0.0311, Batch Acc: 0.9844
+Epoch 3/4, Batch 700, Loss: 0.0883, Batch Acc: 0.9531
+Epoch 3/4, Batch 800, Loss: 0.0685, Batch Acc: 0.9844
+Epoch 3/4, Batch 900, Loss: 0.0234, Batch Acc: 1.0000
+=== Epoch 3 结束 === train_loss=0.0712, train_acc=0.9790, test_acc=0.9811, seconds=6.96
+Epoch 4/4, Batch 0, Loss: 0.0500, Batch Acc: 0.9844
+Epoch 4/4, Batch 100, Loss: 0.0325, Batch Acc: 0.9844
+Epoch 4/4, Batch 200, Loss: 0.1623, Batch Acc: 0.9219
+Epoch 4/4, Batch 300, Loss: 0.0828, Batch Acc: 0.9531
+Epoch 4/4, Batch 400, Loss: 0.0241, Batch Acc: 1.0000
+Epoch 4/4, Batch 500, Loss: 0.0319, Batch Acc: 1.0000
+Epoch 4/4, Batch 600, Loss: 0.0946, Batch Acc: 0.9688
+Epoch 4/4, Batch 700, Loss: 0.0518, Batch Acc: 0.9844
+Epoch 4/4, Batch 800, Loss: 0.0576, Batch Acc: 0.9688
+Epoch 4/4, Batch 900, Loss: 0.0096, Batch Acc: 1.0000
+=== Epoch 4 结束 === train_loss=0.0567, train_acc=0.9830, test_acc=0.9696, seconds=7.00
+训练完成。最佳测试准确率 0.9811 出现在第 3 轮，总耗时 28.70 秒。
+最终测试准确率(最佳模型): 0.9811
+误分类样本数: 189 / 10000
+结果摘要: results/lecture_lr005_bs64_e4/summary.json

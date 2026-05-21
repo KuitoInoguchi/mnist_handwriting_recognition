@@ -6,7 +6,7 @@ CLASS_TO_DIGIT = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 0], dtype=np.int64)
 
 def one_hot_rows_to_digits(one_hot):
     """
-    课件提供的 MNISTData(1).mat 中，one-hot 的行顺序是 1,2,...,9,0。
+    MNISTData(1).mat 中，one-hot 的行顺序是 1,2,...,9,0。
     这里转换为自然数字标签 0~9，避免结果展示时整体错位。
     """
     class_index = np.argmax(one_hot, axis=0).astype(np.int64)

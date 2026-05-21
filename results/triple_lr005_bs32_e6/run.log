@@ -1,0 +1,132 @@
+随机种子: 0
+输出目录: results/triple_lr005_bs32_e6
+训练集: (60000, 1, 28, 28), 测试集: (10000, 1, 28, 28)
+训练标签分布(0~9): [5923, 6742, 5958, 6131, 5842, 5421, 5918, 6265, 5851, 5949]
+测试标签分布(0~9): [980, 1135, 1032, 1010, 982, 892, 958, 1028, 974, 1009]
+模型结构: triple
+开始训练 triple 模型 (Epochs=6, Batch Size=32, LR=0.05)
+权值数(不含 bias): 38220 / 202620, 可训练参数(含 bias): 38394
+Epoch 1/6, Batch 0, Loss: 2.3668, Batch Acc: 0.0312
+Epoch 1/6, Batch 100, Loss: 0.6280, Batch Acc: 0.7812
+Epoch 1/6, Batch 200, Loss: 0.6485, Batch Acc: 0.7812
+Epoch 1/6, Batch 300, Loss: 0.1595, Batch Acc: 0.9375
+Epoch 1/6, Batch 400, Loss: 0.0921, Batch Acc: 0.9688
+Epoch 1/6, Batch 500, Loss: 0.1523, Batch Acc: 0.9688
+Epoch 1/6, Batch 600, Loss: 0.3669, Batch Acc: 0.9062
+Epoch 1/6, Batch 700, Loss: 0.1934, Batch Acc: 0.9375
+Epoch 1/6, Batch 800, Loss: 0.1882, Batch Acc: 0.9375
+Epoch 1/6, Batch 900, Loss: 0.3213, Batch Acc: 0.9062
+Epoch 1/6, Batch 1000, Loss: 0.1933, Batch Acc: 0.9062
+Epoch 1/6, Batch 1100, Loss: 0.2789, Batch Acc: 0.9375
+Epoch 1/6, Batch 1200, Loss: 0.0913, Batch Acc: 0.9688
+Epoch 1/6, Batch 1300, Loss: 0.2825, Batch Acc: 0.9062
+Epoch 1/6, Batch 1400, Loss: 0.2353, Batch Acc: 0.9375
+Epoch 1/6, Batch 1500, Loss: 0.2624, Batch Acc: 0.9375
+Epoch 1/6, Batch 1600, Loss: 0.0750, Batch Acc: 0.9688
+Epoch 1/6, Batch 1700, Loss: 0.0777, Batch Acc: 0.9688
+Epoch 1/6, Batch 1800, Loss: 0.0260, Batch Acc: 1.0000
+=== Epoch 1 结束 === train_loss=0.2442, train_acc=0.9250, test_acc=0.9721, seconds=8.48
+Epoch 2/6, Batch 0, Loss: 0.0268, Batch Acc: 1.0000
+Epoch 2/6, Batch 100, Loss: 0.1896, Batch Acc: 0.9375
+Epoch 2/6, Batch 200, Loss: 0.1469, Batch Acc: 0.9688
+Epoch 2/6, Batch 300, Loss: 0.0228, Batch Acc: 1.0000
+Epoch 2/6, Batch 400, Loss: 0.2772, Batch Acc: 0.9375
+Epoch 2/6, Batch 500, Loss: 0.0971, Batch Acc: 0.9688
+Epoch 2/6, Batch 600, Loss: 0.0606, Batch Acc: 0.9688
+Epoch 2/6, Batch 700, Loss: 0.0429, Batch Acc: 0.9688
+Epoch 2/6, Batch 800, Loss: 0.2570, Batch Acc: 0.9375
+Epoch 2/6, Batch 900, Loss: 0.1261, Batch Acc: 0.9688
+Epoch 2/6, Batch 1000, Loss: 0.0275, Batch Acc: 1.0000
+Epoch 2/6, Batch 1100, Loss: 0.0741, Batch Acc: 0.9688
+Epoch 2/6, Batch 1200, Loss: 0.0433, Batch Acc: 0.9688
+Epoch 2/6, Batch 1300, Loss: 0.0498, Batch Acc: 0.9688
+Epoch 2/6, Batch 1400, Loss: 0.0956, Batch Acc: 0.9688
+Epoch 2/6, Batch 1500, Loss: 0.0120, Batch Acc: 1.0000
+Epoch 2/6, Batch 1600, Loss: 0.0026, Batch Acc: 1.0000
+Epoch 2/6, Batch 1700, Loss: 0.1571, Batch Acc: 0.9688
+Epoch 2/6, Batch 1800, Loss: 0.1237, Batch Acc: 0.9688
+=== Epoch 2 结束 === train_loss=0.0868, train_acc=0.9734, test_acc=0.9786, seconds=9.01
+Epoch 3/6, Batch 0, Loss: 0.0349, Batch Acc: 1.0000
+Epoch 3/6, Batch 100, Loss: 0.0135, Batch Acc: 1.0000
+Epoch 3/6, Batch 200, Loss: 0.1933, Batch Acc: 0.9688
+Epoch 3/6, Batch 300, Loss: 0.0045, Batch Acc: 1.0000
+Epoch 3/6, Batch 400, Loss: 0.0946, Batch Acc: 0.9688
+Epoch 3/6, Batch 500, Loss: 0.0281, Batch Acc: 0.9688
+Epoch 3/6, Batch 600, Loss: 0.1022, Batch Acc: 0.9688
+Epoch 3/6, Batch 700, Loss: 0.1899, Batch Acc: 0.9375
+Epoch 3/6, Batch 800, Loss: 0.0187, Batch Acc: 1.0000
+Epoch 3/6, Batch 900, Loss: 0.1393, Batch Acc: 0.9688
+Epoch 3/6, Batch 1000, Loss: 0.0647, Batch Acc: 0.9688
+Epoch 3/6, Batch 1100, Loss: 0.0188, Batch Acc: 1.0000
+Epoch 3/6, Batch 1200, Loss: 0.0042, Batch Acc: 1.0000
+Epoch 3/6, Batch 1300, Loss: 0.0699, Batch Acc: 0.9688
+Epoch 3/6, Batch 1400, Loss: 0.0602, Batch Acc: 0.9688
+Epoch 3/6, Batch 1500, Loss: 0.0613, Batch Acc: 0.9688
+Epoch 3/6, Batch 1600, Loss: 0.0674, Batch Acc: 0.9688
+Epoch 3/6, Batch 1700, Loss: 0.0729, Batch Acc: 1.0000
+Epoch 3/6, Batch 1800, Loss: 0.0046, Batch Acc: 1.0000
+=== Epoch 3 结束 === train_loss=0.0612, train_acc=0.9808, test_acc=0.9813, seconds=9.44
+Epoch 4/6, Batch 0, Loss: 0.0114, Batch Acc: 1.0000
+Epoch 4/6, Batch 100, Loss: 0.4169, Batch Acc: 0.9375
+Epoch 4/6, Batch 200, Loss: 0.1648, Batch Acc: 0.9375
+Epoch 4/6, Batch 300, Loss: 0.0850, Batch Acc: 0.9688
+Epoch 4/6, Batch 400, Loss: 0.0438, Batch Acc: 1.0000
+Epoch 4/6, Batch 500, Loss: 0.1273, Batch Acc: 0.9688
+Epoch 4/6, Batch 600, Loss: 0.1587, Batch Acc: 0.9375
+Epoch 4/6, Batch 700, Loss: 0.0058, Batch Acc: 1.0000
+Epoch 4/6, Batch 800, Loss: 0.0484, Batch Acc: 0.9688
+Epoch 4/6, Batch 900, Loss: 0.0242, Batch Acc: 1.0000
+Epoch 4/6, Batch 1000, Loss: 0.1016, Batch Acc: 0.9688
+Epoch 4/6, Batch 1100, Loss: 0.0105, Batch Acc: 1.0000
+Epoch 4/6, Batch 1200, Loss: 0.0210, Batch Acc: 1.0000
+Epoch 4/6, Batch 1300, Loss: 0.0043, Batch Acc: 1.0000
+Epoch 4/6, Batch 1400, Loss: 0.0033, Batch Acc: 1.0000
+Epoch 4/6, Batch 1500, Loss: 0.0165, Batch Acc: 1.0000
+Epoch 4/6, Batch 1600, Loss: 0.0623, Batch Acc: 0.9688
+Epoch 4/6, Batch 1700, Loss: 0.0151, Batch Acc: 1.0000
+Epoch 4/6, Batch 1800, Loss: 0.0021, Batch Acc: 1.0000
+=== Epoch 4 结束 === train_loss=0.0499, train_acc=0.9843, test_acc=0.9854, seconds=9.36
+Epoch 5/6, Batch 0, Loss: 0.0615, Batch Acc: 0.9688
+Epoch 5/6, Batch 100, Loss: 0.0083, Batch Acc: 1.0000
+Epoch 5/6, Batch 200, Loss: 0.0288, Batch Acc: 1.0000
+Epoch 5/6, Batch 300, Loss: 0.0984, Batch Acc: 0.9688
+Epoch 5/6, Batch 400, Loss: 0.0115, Batch Acc: 1.0000
+Epoch 5/6, Batch 500, Loss: 0.0063, Batch Acc: 1.0000
+Epoch 5/6, Batch 600, Loss: 0.3432, Batch Acc: 0.9688
+Epoch 5/6, Batch 700, Loss: 0.0251, Batch Acc: 0.9688
+Epoch 5/6, Batch 800, Loss: 0.0137, Batch Acc: 1.0000
+Epoch 5/6, Batch 900, Loss: 0.0067, Batch Acc: 1.0000
+Epoch 5/6, Batch 1000, Loss: 0.1003, Batch Acc: 0.9688
+Epoch 5/6, Batch 1100, Loss: 0.0054, Batch Acc: 1.0000
+Epoch 5/6, Batch 1200, Loss: 0.0359, Batch Acc: 1.0000
+Epoch 5/6, Batch 1300, Loss: 0.0095, Batch Acc: 1.0000
+Epoch 5/6, Batch 1400, Loss: 0.0099, Batch Acc: 1.0000
+Epoch 5/6, Batch 1500, Loss: 0.1004, Batch Acc: 0.9688
+Epoch 5/6, Batch 1600, Loss: 0.2034, Batch Acc: 0.9062
+Epoch 5/6, Batch 1700, Loss: 0.0901, Batch Acc: 0.9688
+Epoch 5/6, Batch 1800, Loss: 0.0008, Batch Acc: 1.0000
+=== Epoch 5 结束 === train_loss=0.0417, train_acc=0.9865, test_acc=0.9856, seconds=9.32
+Epoch 6/6, Batch 0, Loss: 0.0725, Batch Acc: 0.9688
+Epoch 6/6, Batch 100, Loss: 0.0033, Batch Acc: 1.0000
+Epoch 6/6, Batch 200, Loss: 0.0022, Batch Acc: 1.0000
+Epoch 6/6, Batch 300, Loss: 0.0732, Batch Acc: 0.9375
+Epoch 6/6, Batch 400, Loss: 0.0363, Batch Acc: 0.9688
+Epoch 6/6, Batch 500, Loss: 0.0097, Batch Acc: 1.0000
+Epoch 6/6, Batch 600, Loss: 0.0140, Batch Acc: 1.0000
+Epoch 6/6, Batch 700, Loss: 0.0347, Batch Acc: 0.9688
+Epoch 6/6, Batch 800, Loss: 0.0008, Batch Acc: 1.0000
+Epoch 6/6, Batch 900, Loss: 0.0119, Batch Acc: 1.0000
+Epoch 6/6, Batch 1000, Loss: 0.0267, Batch Acc: 1.0000
+Epoch 6/6, Batch 1100, Loss: 0.0020, Batch Acc: 1.0000
+Epoch 6/6, Batch 1200, Loss: 0.0142, Batch Acc: 1.0000
+Epoch 6/6, Batch 1300, Loss: 0.0791, Batch Acc: 0.9688
+Epoch 6/6, Batch 1400, Loss: 0.0042, Batch Acc: 1.0000
+Epoch 6/6, Batch 1500, Loss: 0.0004, Batch Acc: 1.0000
+Epoch 6/6, Batch 1600, Loss: 0.0023, Batch Acc: 1.0000
+Epoch 6/6, Batch 1700, Loss: 0.0833, Batch Acc: 0.9688
+Epoch 6/6, Batch 1800, Loss: 0.0514, Batch Acc: 0.9688
+=== Epoch 6 结束 === train_loss=0.0353, train_acc=0.9888, test_acc=0.9804, seconds=13.25
+训练完成。最佳测试准确率 0.9856 出现在第 5 轮，总耗时 58.86 秒。
+最终测试准确率(最佳模型): 0.9856
+误分类样本数: 144 / 10000
+结果摘要: results/triple_lr005_bs32_e6/summary.json

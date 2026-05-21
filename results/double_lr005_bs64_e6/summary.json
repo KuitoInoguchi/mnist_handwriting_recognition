@@ -1,0 +1,547 @@
+{
+  "created_at": "2026-05-21T23:09:10",
+  "data_path": "data/MNISTData(1).mat",
+  "model_name": "double",
+  "architecture": [
+    {
+      "index": 0,
+      "layer": "Conv2D",
+      "shape": "(12, 1, 5, 5)",
+      "params": 312
+    },
+    {
+      "index": 1,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 2,
+      "layer": "AvgPool2D",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 3,
+      "layer": "Conv2D",
+      "shape": "(24, 12, 5, 5)",
+      "params": 7224
+    },
+    {
+      "index": 4,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 5,
+      "layer": "AvgPool2D",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 6,
+      "layer": "Flatten",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 7,
+      "layer": "Linear",
+      "shape": "(384, 128)",
+      "params": 49280
+    },
+    {
+      "index": 8,
+      "layer": "ReLU",
+      "shape": "",
+      "params": 0
+    },
+    {
+      "index": 9,
+      "layer": "Linear",
+      "shape": "(128, 10)",
+      "params": 1290
+    },
+    {
+      "index": 10,
+      "layer": "Softmax",
+      "shape": "",
+      "params": 0
+    }
+  ],
+  "weight_count_without_bias": 57932,
+  "trainable_params_with_bias": 58106,
+  "parameter_limit_weights": 202620,
+  "hyperparameters": {
+    "epochs": 6,
+    "batch_size": 64,
+    "learning_rate": 0.05,
+    "optimizer": "mini-batch SGD",
+    "seed": 0
+  },
+  "data": {
+    "train_shape": [
+      60000,
+      1,
+      28,
+      28
+    ],
+    "test_shape": [
+      10000,
+      1,
+      28,
+      28
+    ],
+    "train_label_counts": [
+      5923,
+      6742,
+      5958,
+      6131,
+      5842,
+      5421,
+      5918,
+      6265,
+      5851,
+      5949
+    ],
+    "test_label_counts": [
+      980,
+      1135,
+      1032,
+      1010,
+      982,
+      892,
+      958,
+      1028,
+      974,
+      1009
+    ],
+    "pixel_min": 0.0,
+    "pixel_max": 1.0
+  },
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.2922125645140807,
+        "train_accuracy": 0.9107,
+        "test_accuracy": 0.9647,
+        "seconds": 8.509581000002072
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.11001274899244308,
+        "train_accuracy": 0.9665833333333333,
+        "test_accuracy": 0.9698,
+        "seconds": 8.538045500001317
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.07928513847986857,
+        "train_accuracy": 0.976,
+        "test_accuracy": 0.9787,
+        "seconds": 8.582371749998856
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.06402382865299781,
+        "train_accuracy": 0.9804833333333334,
+        "test_accuracy": 0.9794,
+        "seconds": 8.579049957999814
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.054554824877281985,
+        "train_accuracy": 0.98335,
+        "test_accuracy": 0.9801,
+        "seconds": 8.536687207997602
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.04607825302730004,
+        "train_accuracy": 0.9857333333333334,
+        "test_accuracy": 0.9853,
+        "seconds": 8.538041499999963
+      }
+    ],
+    "best_epoch": 6,
+    "best_test_accuracy": 0.9853,
+    "train_seconds": 51.28483299999789
+  },
+  "analysis": {
+    "test_accuracy": 0.9853,
+    "confusion_matrix": [
+      [
+        964,
+        1,
+        1,
+        0,
+        2,
+        0,
+        3,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        1130,
+        2,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1029,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        993,
+        0,
+        4,
+        0,
+        4,
+        2,
+        4
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        974,
+        0,
+        1,
+        1,
+        0,
+        5
+      ],
+      [
+        2,
+        0,
+        0,
+        6,
+        0,
+        879,
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        3,
+        2,
+        0,
+        1,
+        6,
+        4,
+        939,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        3,
+        9,
+        0,
+        0,
+        0,
+        0,
+        1010,
+        1,
+        5
+      ],
+      [
+        2,
+        1,
+        5,
+        2,
+        3,
+        4,
+        0,
+        4,
+        949,
+        4
+      ],
+      [
+        0,
+        3,
+        1,
+        2,
+        8,
+        3,
+        0,
+        4,
+        2,
+        986
+      ]
+    ],
+    "per_class_accuracy": [
+      0.9836734693877551,
+      0.9955947136563876,
+      0.997093023255814,
+      0.9831683168316832,
+      0.9918533604887984,
+      0.9854260089686099,
+      0.9801670146137788,
+      0.9824902723735408,
+      0.9743326488706365,
+      0.977205153617443
+    ],
+    "num_errors": 147,
+    "error_rate": 0.0147,
+    "top_errors": [
+      {
+        "index": 3520,
+        "true": 6,
+        "pred": 4,
+        "confidence": 0.9999415874481201
+      },
+      {
+        "index": 2654,
+        "true": 6,
+        "pred": 1,
+        "confidence": 0.9990653395652771
+      },
+      {
+        "index": 3767,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9965662360191345
+      },
+      {
+        "index": 9009,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9937453269958496
+      },
+      {
+        "index": 9729,
+        "true": 5,
+        "pred": 6,
+        "confidence": 0.9934937357902527
+      },
+      {
+        "index": 1901,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.9876468181610107
+      },
+      {
+        "index": 1299,
+        "true": 5,
+        "pred": 7,
+        "confidence": 0.9868329167366028
+      },
+      {
+        "index": 3503,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.9839604496955872
+      },
+      {
+        "index": 1226,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9773081541061401
+      },
+      {
+        "index": 5937,
+        "true": 5,
+        "pred": 3,
+        "confidence": 0.9764499068260193
+      },
+      {
+        "index": 2130,
+        "true": 4,
+        "pred": 9,
+        "confidence": 0.9710020422935486
+      },
+      {
+        "index": 1530,
+        "true": 8,
+        "pred": 7,
+        "confidence": 0.964576244354248
+      },
+      {
+        "index": 9015,
+        "true": 7,
+        "pred": 2,
+        "confidence": 0.9637426733970642
+      },
+      {
+        "index": 2896,
+        "true": 8,
+        "pred": 0,
+        "confidence": 0.9627156257629395
+      },
+      {
+        "index": 4880,
+        "true": 0,
+        "pred": 8,
+        "confidence": 0.9617254734039307
+      },
+      {
+        "index": 3073,
+        "true": 1,
+        "pred": 2,
+        "confidence": 0.9598019123077393
+      },
+      {
+        "index": 2293,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.954675018787384
+      },
+      {
+        "index": 6597,
+        "true": 0,
+        "pred": 7,
+        "confidence": 0.9544461369514465
+      },
+      {
+        "index": 1681,
+        "true": 3,
+        "pred": 7,
+        "confidence": 0.9526313543319702
+      },
+      {
+        "index": 6400,
+        "true": 0,
+        "pred": 4,
+        "confidence": 0.9507507681846619
+      },
+      {
+        "index": 2387,
+        "true": 9,
+        "pred": 1,
+        "confidence": 0.9499452114105225
+      },
+      {
+        "index": 947,
+        "true": 8,
+        "pred": 9,
+        "confidence": 0.9462776184082031
+      },
+      {
+        "index": 5199,
+        "true": 6,
+        "pred": 4,
+        "confidence": 0.934847891330719
+      },
+      {
+        "index": 3869,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.9347636103630066
+      },
+      {
+        "index": 582,
+        "true": 8,
+        "pred": 2,
+        "confidence": 0.9343194961547852
+      },
+      {
+        "index": 4578,
+        "true": 7,
+        "pred": 9,
+        "confidence": 0.9331772923469543
+      },
+      {
+        "index": 2953,
+        "true": 3,
+        "pred": 5,
+        "confidence": 0.9289630651473999
+      },
+      {
+        "index": 3985,
+        "true": 9,
+        "pred": 4,
+        "confidence": 0.9205905795097351
+      },
+      {
+        "index": 9669,
+        "true": 4,
+        "pred": 7,
+        "confidence": 0.9196352958679199
+      },
+      {
+        "index": 2135,
+        "true": 6,
+        "pred": 1,
+        "confidence": 0.9172282218933105
+      },
+      {
+        "index": 1393,
+        "true": 5,
+        "pred": 3,
+        "confidence": 0.916713535785675
+      },
+      {
+        "index": 4224,
+        "true": 9,
+        "pred": 7,
+        "confidence": 0.9126274585723877
+      },
+      {
+        "index": 3422,
+        "true": 6,
+        "pred": 0,
+        "confidence": 0.9082532525062561
+      },
+      {
+        "index": 4956,
+        "true": 8,
+        "pred": 4,
+        "confidence": 0.9066155552864075
+      },
+      {
+        "index": 1112,
+        "true": 4,
+        "pred": 6,
+        "confidence": 0.8971096873283386
+      },
+      {
+        "index": 1247,
+        "true": 9,
+        "pred": 5,
+        "confidence": 0.891762375831604
+      }
+    ],
+    "mosaic_path": "results/double_lr005_bs64_e6/misclassified_samples.png"
+  },
+  "hardware": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "Model Name": "MacBook Air",
+    "Model Identifier": "Mac17,3",
+    "Chip": "Apple M5",
+    "Total Number of Cores": "10 (4 Performance and 6 Efficiency)",
+    "Memory": "16 GB"
+  },
+  "paths": {
+    "output_dir": "results/double_lr005_bs64_e6",
+    "log": "results/double_lr005_bs64_e6/run.log",
+    "history_csv": "results/double_lr005_bs64_e6/history.csv",
+    "model": "results/double_lr005_bs64_e6/best_model.npz",
+    "mosaic": "results/double_lr005_bs64_e6/misclassified_samples.png"
+  }
+}
