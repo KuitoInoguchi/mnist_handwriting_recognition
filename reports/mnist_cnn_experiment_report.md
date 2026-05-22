@@ -61,7 +61,7 @@
 
 ### 4.2 网络架构图
 
-![网络架构图](network_architecture.png)
+![网络架构图](structure.png)
 
 图 1 展示了 `LectureCNN`、`DoubleCNN` 和 `TripleCNN` 的整体网络结构、主要层次以及特征图尺寸变化。
 

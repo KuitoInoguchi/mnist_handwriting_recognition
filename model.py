@@ -185,8 +185,6 @@ class TripleCNN(SequentialCNN):
     -> 3x3 Conv -> ReLU -> 2x2 AvgPool
     -> 3x3 Conv -> ReLU
     -> Flatten -> FC -> ReLU -> 10 类 Softmax
-
-    通过小卷积核叠加提升特征提取层级，同时保持参数量远低于课件同款模型。
     """
 
     name = "triple"
